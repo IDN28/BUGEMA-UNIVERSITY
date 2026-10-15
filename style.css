@@ -1,0 +1,1112 @@
+/*-------------------GLOBAL RESET & BASE STYLES--------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ADD8E6;
+    color: #333;
+    line-height: 1.6;
+}
+
+::selection {
+    background: #f44336;
+    color: #fff;
+}
+
+/*-----------------------HEADER / HERO SECTION--------------------*/
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/science\ complex.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/* ----- Navigation ----- */
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links ul li a:hover {
+    color: #f44336;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+nav .fa {
+    display: none;
+}
+
+/* ----- Hero Text ----- */
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+    font-weight: 700;
+    color: #2405ed;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* ----- Hero Button ----- */
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.hero-btn:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+    color: #fff;
+}
+
+/*--------------------SUB-HEADER (for inner pages)------------------------*/
+.sub-header {
+    height: 30vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("IMAGES/science\ complex.png");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-header h1 {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+/*-----------------------COMMON COMPONENTS----------------------------*/
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 5%;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-subtitle {
+    color: #555;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    padding: 10px;
+    line-height: 24px;
+}
+
+/*------------------------COURSES SECTION---------------------*/
+.courses {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.courses h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.courses>p {
+    color: #555;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 10px;
+    line-height: 24px;
+}
+
+.course-col {
+    flex: 1 1 calc(33.333% - 30px);
+    min-width: 280px;
+    background: #fff3f3;
+    border-radius: 10px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.course-col img {
+    width: 100%;
+    height: 55%;
+}
+
+.course-col h3 {
+    text-align: center;
+    color: #0077B5;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-col p {
+    color: #000;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 10px;
+    line-height: 24px;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
+
+.home-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #000;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+    margin-top: 40px;
+}
+
+.home-btn:hover {
+    background: greenyellow;
+    color: white;
+}
+
+/*-------------------CAMPUS LIFE SECTION------------------*/
+.campus-life {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.campus-life h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.campus-life>p {
+    color: #555;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 10px;
+    line-height: 24px;
+}
+
+.campus-col {
+    flex: 1 1 calc(50% - 30px);
+    min-width: 280px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-col img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.layer {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 50%;
+    opacity: 1;
+}
+
+/*--------------------BLOG SECTION-----------------*/
+.blog {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.blog h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.blog>p {
+    color: #555;
+    font-size: 16px;
+}
+
+.blog-post {
+    background: #5fd19e;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 30px auto;
+    width: 70%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.blog-post h2 {
+    margin-bottom: 15px;
+}
+
+.blog-post p {
+    line-height: 26px;
+}
+
+/*--------------------FACILITIES SECTION---------------------*/
+.facilities {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.facilities h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.facilities>p {
+    color: #555;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 10px;
+    line-height: 24px;
+}
+
+.facilities-col {
+    flex: 1 1 calc(50% - 30px);
+    min-width: 280px;
+    background: #fff3f3;
+    border-radius: 10px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.facilities-col:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.facilities-col img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.facilities-col h3 {
+    text-align: left;
+    color: #5810c3;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+
+.facilities-col p {
+    text-align: left;
+    color: #555;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/*-------------------TESTIMONIALS SECTION-----------------*/
+.testimonials {
+    width: 90%;
+    margin: auto;
+    padding: 100px 0;
+}
+
+.testimonials h1 {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.testimonials>p {
+    color: #555;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 10px;
+    line-height: 24px;
+}
+
+.testimonial-col {
+    flex: 1 1 calc(50% - 30px);
+    min-width: 280px;
+    background: #69e787;
+    border-radius: 10px;
+    padding: 30px 25px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.testimonial-col:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-col img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.testimonial-col .testimonial-content {
+    flex: 1;
+}
+
+.testimonial-col p {
+    color: #000;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.testimonial-col h3 {
+    font-weight: 600;
+    text-align: left;
+    color: #000;
+    font-size: 20px;
+    margin-top: 16px;
+}
+
+.testimonial-col .fa {
+    color: #f44336;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
+/*---------------------CALL TO ACTION SECTION----------------------*/
+.cta {
+    width: 85%;
+    margin: 100px auto;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+.cta p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.cta a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.cta a:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+}
+
+/*-------------------ABOUT PAGE----------------*/
+.about {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.about h1 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.about p {
+    color: #555;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+/*-----------------ADMISSION PAGE---------------------*/
+.admission {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.admission h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.admission>p {
+    color: #777;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.admission .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.admission-col {
+    flex: 1 1 calc(33.333% - 30px);
+    min-width: 250px;
+    background: #65e1e6;
+    border-radius: 10px;
+    padding: 20px 25px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.admission-col:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.admission-col ul,
+.admission-col ol {
+    text-align: left;
+    padding-left: 25px;
+}
+
+.admission-col p {
+    text-align: left;
+    padding: 5px 0;
+}
+
+/*---------------CONTACT PAGE-------------------*/
+.contact {
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.contact h2 {
+    color: #075E54;
+    text-align: center;
+    padding-top: 40px;
+}
+
+/* Contact Info Row */
+.info-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 40px auto;
+    width: 100%;
+}
+
+.info-col {
+    flex: 1 1 200px;
+    text-align: center;
+    padding: 10px;
+}
+
+.info-col i {
+    display: inline-block;
+    font-size: 42px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.info-col p {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    margin: 4px 0;
+}
+
+/* Divider */
+.divider {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 40px 0;
+}
+
+/* Contact Form */
+.form-container {
+    max-width: 700px;
+    margin: auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.required {
+    color: #e60000;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom: 2px solid #e60000;
+}
+
+.contact .hero-btn {
+    display: inline-block;
+    padding: 12px 34px;
+    border: 1px solid #000;
+    background: transparent;
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact .hero-btn:hover {
+    background: greenyellow;
+    color: white;
+}
+
+.red-btn {
+    border: 1px solid #e60000 !important;
+    background: transparent;
+    color: #e60000 !important;
+    font-weight: 600;
+}
+
+.red-btn:hover {
+    background: #e60000 !important;
+    color: #fff !important;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #075E54;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(7, 94, 84, 0.4);
+    margin-left: 100px;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 12px;
+    height: 12px;
+    background-color: #ff3b30;
+    border-radius: 50%;
+    border: 2px solid #075E54;
+}
+
+/*-----------FOOTER---------------*/
+.footer {
+    background: #000;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 80px;
+}
+
+.footer h4 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.footer span {
+    color: red;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Social Icons */
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+}
+
+.icons .fa {
+    color: #f44336;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.icons .fa:hover {
+    color: #5810c3;
+    transform: translateY(-3px);
+}
+
+.fa-facebook {
+    color: #3b5999;
+}
+
+.fa-twitter {
+    color: #55acee;
+}
+
+.fa-instagram {
+    color: #e4405f;
+}
+
+.fa-linkedin {
+    color: #0077B5;
+}
+
+.fa-heart-o {
+    color: #e25555;
+}
+
+/*--------------RESPONSIVE DESIGN----------------*/
+
+/* Tablet & Mobile */
+@media (max-width: 700px) {
+
+    /* ----- Navigation ----- */
+    .text-box h1 {
+        font-size: 24px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 999;
+        transition: 1s;
+        padding-top: 60px;
+    }
+
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
+
+    .nav-links ul li a {
+        color: #fff;
+        font-size: 16px;
+    }
+
+    /* ----- Layout ----- */
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .course-col,
+    .campus-col,
+    .facilities-col,
+    .testimonial-col,
+    .admission-col {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    /* ----- Sections ----- */
+    .campus-life {
+        width: 95%;
+        padding: 50px 0;
+    }
+
+    .courses {
+        width: 95%;
+        padding: 50px 0;
+    }
+
+    .facilities {
+        width: 95%;
+        padding: 50px 0;
+    }
+
+    .blog-post {
+        width: 95%;
+    }
+
+    .cta {
+        width: 95%;
+        padding: 60px 20px;
+    }
+
+    .cta h1 {
+        font-size: 20px;
+    }
+
+    .sub-header h1 {
+        font-size: 24px;
+    }
+
+    .testimonial-col {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .testimonial-col p,
+    .testimonial-col h3 {
+        text-align: center;
+    }
+
+    .testimonial-col .fa {
+        text-align: center;
+    }
+
+    /* ----- Contact ----- */
+    .contact {
+        width: 95%;
+    }
+
+    .info-col {
+        flex: 1 1 100%;
+    }
+
+    /* ----- Whatsapp ----- */
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 26px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 400px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .hero-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+
+/*----------------IMAGE ANIMATION----------------------*/
+img {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Main Form Container */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    min-height: 100vh;
+    padding: 30px;
+    background: #3c84cc;
+}
+
+.form :hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+
+#registrationForm {
+    background: #88becf;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* Heading */
+#registrationForm h2 {
+    margin-bottom: 20px;
+    color: #333333;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Labels */
+#registrationForm label {
+    display: block;
+    margin-bottom: 6px;
+    color: #0f19de;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Form Inputs and Select Boxes */
+#registrationForm input,
+#registrationForm select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+/* Focus effect on input selection */
+#registrationForm input:focus,
+#registrationForm select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Submit Button */
+#registrationForm button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover State */
+#registrationForm button:hover {
+    background-color: #0056b3;
+}
+
+/* Red border highlight for invalid inputs */
+#registrationForm input.input-error,
+#registrationForm select.input-error {
+    border: 2px solid #e74c3c !important;
+    background-color: #fdf2f2;
+    animation: shake 0.2s ease-in-out 0s 2;
+}
+
+/* Optional subtle shake effect on error */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    75% {
+        transform: translateX(4px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}

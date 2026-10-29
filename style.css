@@ -130,6 +130,229 @@ nav .fa {
     color: #fff;
 }
 
+.portal-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 25px 0 20px;
+}
+
+.portal-btn {
+    margin: 0;
+    min-width: 170px;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.portal-student {
+    border-color: #51c576;
+    background: rgba(81, 197, 118, 0.18);
+}
+
+.portal-staff {
+    border-color: #4c8bf5;
+    background: rgba(76, 139, 245, 0.18);
+}
+
+.portal-admin {
+    border-color: #ffb703;
+    background: rgba(255, 183, 3, 0.18);
+}
+
+.portal-student:hover {
+    border-color: #51c576;
+    background: #51c576;
+}
+
+.portal-staff:hover {
+    border-color: #4c8bf5;
+    background: #4c8bf5;
+}
+
+.portal-admin:hover {
+    border-color: #ffb703;
+    background: #ffb703;
+}
+
+.portal-body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #eef7ff 0%, #dfeeff 100%);
+}
+
+.portal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 6%;
+    background: rgba(8, 27, 54, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.portal-brand a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.portal-nav {
+    display: flex;
+    gap: 18px;
+}
+
+.portal-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.portal-panel {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.portal-card {
+    width: 100%;
+    max-width: 460px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+    padding: 32px 28px;
+}
+
+.portal-card h1 {
+    margin-top: 18px;
+    font-size: 2rem;
+    color: #1d3557;
+}
+
+.portal-card p {
+    margin-top: 8px;
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.portal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 26px;
+}
+
+.portal-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #1f2937;
+    font-weight: 600;
+}
+
+.portal-form input {
+    border: 1px solid #d5d9e2;
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portal-form input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+.portal-submit {
+    border: none;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.portal-submit:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+.portal-student-submit {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.portal-staff-submit {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+}
+
+.portal-admin-submit {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.portal-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 22px;
+    font-size: 0.9rem;
+}
+
+.portal-actions a {
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.portal-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.portal-student-tag {
+    background: rgba(34, 197, 94, 0.12);
+    color: #166534;
+}
+
+.portal-staff-tag {
+    background: rgba(59, 130, 246, 0.12);
+    color: #1d4ed8;
+}
+
+.portal-admin-tag {
+    background: rgba(245, 158, 11, 0.14);
+    color: #b45309;
+}
+
+.portal-student-body {
+    background: linear-gradient(135deg, #eafaf1 0%, #dff7e7 100%);
+}
+
+.portal-staff-body {
+    background: linear-gradient(135deg, #eef4ff 0%, #e2edff 100%);
+}
+
+.portal-admin-body {
+    background: linear-gradient(135deg, #fff7e8 0%, #fff1cf 100%);
+}
+
 /*--------------------SUB-HEADER (for inner pages)------------------------*/
 .sub-header {
     height: 30vh;

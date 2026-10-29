@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications Received | Bugema University</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="application-page-body">
+    <header class="portal-header">
+        <div class="portal-brand">
+            <a href="index.html">Bugema University</a>
+        </div>
+        <nav class="portal-nav">
+            <a href="index.html">Home</a>
+            <a href="student-application.html">Apply</a>
+            <a href="admission.html">Admission</a>
+        </nav>
+    </header>
+
+    <main class="application-shell">
+        <section class="application-card table-card">
+            <div class="application-header">
+                <span class="portal-tag portal-student-tag">Applications</span>
+                <h1>Student Applications Received</h1>
+                <p>Below are the student applications submitted through the university application form.</p>
+            </div>
+
+            <div class="table-wrap">
+                <table id="applicationsTable">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Email</th>
+                            <th>Program</th>
+                            <th>Intake</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="applicationsBody">
+                        <tr>
+                            <td colspan="5" class="empty-state">No applications submitted yet.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="application-buttons">
+                <a href="student-application.html" class="portal-submit portal-student-submit">New Application</a>
+                <a href="index.html" class="secondary-button">Back to Home</a>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

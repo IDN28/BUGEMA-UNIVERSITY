@@ -17,14 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  // 2. Form Submission Handling with Custom Validation
-  const registrationForm = document.getElementById("registrationForm");
+  const studentApplicationForm = document.getElementById("studentApplicationForm");
 
-  if (registrationForm) {
-    // Select all inputs and select boxes inside the form
-    const inputs = registrationForm.querySelectorAll("input, select");
+  if (studentApplicationForm) {
+    const inputs = studentApplicationForm.querySelectorAll("input, select, textarea");
 
-    // Clear red error highlight on live typing/selection
     inputs.forEach(input => {
       input.addEventListener("input", function () {
         if (this.classList.contains("input-error")) {
@@ -33,61 +30,75 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 
-    registrationForm.addEventListener("submit", async function (event) {
-      event.preventDefault(); // Prevent default page refresh
+    studentApplicationForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
       let isValid = true;
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      // Validate each input field
       inputs.forEach(input => {
         const value = input.value.trim();
 
-        // Check empty required fields
         if (input.hasAttribute("required") && value === "") {
           input.classList.add("input-error");
           isValid = false;
-        } 
-        // Validate specific email format
-        else if (input.type === "email" && !emailRegex.test(value)) {
+        } else if (input.type === "email" && !emailRegex.test(value)) {
           input.classList.add("input-error");
           isValid = false;
-        } 
-        // Clear error if valid
-        else {
+        } else {
           input.classList.remove("input-error");
         }
       });
 
-      // Stop submission if any field is invalid
       if (!isValid) {
+        alert("Please complete all required fields correctly before submitting.");
         return;
       }
 
-      // Submit form data via AJAX if validation passes
-      const form = event.target;
-      const formData = new FormData(form);
+      const formData = new FormData(studentApplicationForm);
+      const applicant = {
+        firstName: formData.get("firstName"),
+        lastName: formData.get("lastName"),
+        email: formData.get("email"),
+        phone: formData.get("phone"),
+        gender: formData.get("gender"),
+        dob: formData.get("dob"),
+        nationality: formData.get("nationality"),
+        nationalId: formData.get("nationalId"),
+        address: formData.get("address"),
+        program: formData.get("program"),
+        intake: formData.get("intake"),
+        school: formData.get("school"),
+        academicBackground: formData.get("academicBackground")
+      };
 
-      try {
-        const response = await fetch(form.action, {
-          method: "POST",
-          body: formData,
-          headers: {
-            'Accept': 'application/json'
-          }
-        });
+      const existingApplications = JSON.parse(localStorage.getItem("bugemaStudentApplications") || "[]");
+      existingApplications.push(applicant);
+      localStorage.setItem("bugemaStudentApplications", JSON.stringify(existingApplications));
 
-        if (response.ok) {
-          alert("Registration successful! Details have been sent.");
-          form.reset(); // Clear form fields
-        } else {
-          alert("There was an issue submitting your registration. Please try again.");
-        }
-      } catch (error) {
-        console.error("Submission error:", error);
-        alert("Unable to reach the server. Check your connection.");
-      }
+      alert("Your application has been submitted successfully.");
+      studentApplicationForm.reset();
+      window.location.href = "applications.html";
     });
+  }
+
+  const applicationsTable = document.getElementById("applicationsTable");
+  const applicationsBody = document.getElementById("applicationsBody");
+
+  if (applicationsTable && applicationsBody) {
+    const applications = JSON.parse(localStorage.getItem("bugemaStudentApplications") || "[]");
+
+    if (applications.length > 0) {
+      applicationsBody.innerHTML = applications.map(applicant => `
+        <tr>
+          <td>${applicant.firstName} ${applicant.lastName}</td>
+          <td>${applicant.email}</td>
+          <td>${applicant.program}</td>
+          <td>${applicant.intake}</td>
+          <td>${applicant.phone}</td>
+        </tr>
+      `).join("");
+    }
   }
 
 });

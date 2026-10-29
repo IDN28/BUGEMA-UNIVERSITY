@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Application | Bugema University</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="application-page-body">
+    <header class="portal-header">
+        <div class="portal-brand">
+            <a href="index.html">Bugema University</a>
+        </div>
+        <nav class="portal-nav">
+            <a href="index.html">Home</a>
+            <a href="admission.html">Admission</a>
+            <a href="applications.html">Applications</a>
+        </nav>
+    </header>
+
+    <main class="application-shell">
+        <section class="application-card">
+            <div class="application-header">
+                <span class="portal-tag portal-student-tag">Student Admission</span>
+                <h1>Apply for Admission</h1>
+                <p>Complete the form below to submit your application to Bugema University.</p>
+            </div>
+
+            <form id="studentApplicationForm" class="application-form" novalidate>
+                <div class="field-grid">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input id="firstName" name="firstName" type="text" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input id="lastName" name="lastName" type="text" placeholder="Enter your last name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input id="email" name="email" type="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input id="phone" name="phone" type="tel" placeholder="e.g. +256700000000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input id="dob" name="dob" type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nationality">Nationality</label>
+                        <input id="nationality" name="nationality" type="text" placeholder="e.g. Ugandan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nationalId">National ID / Passport No.</label>
+                        <input id="nationalId" name="nationalId" type="text" placeholder="Enter your ID or passport number" required>
+                    </div>
+                    <div class="form-group wide">
+                        <label for="address">Home Address</label>
+                        <textarea id="address" name="address" rows="3" placeholder="Enter your residential address" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="program">Program Applying For</label>
+                        <select id="program" name="program" required>
+                            <option value="">Select program</option>
+                            <option value="Bachelor of Science in Computer Science">Bachelor of Science in Computer Science</option>
+                            <option value="Bachelor of Business Administration">Bachelor of Business Administration</option>
+                            <option value="Bachelor of Education">Bachelor of Education</option>
+                            <option value="Bachelor of Nursing">Bachelor of Nursing</option>
+                            <option value="Bachelor of Agriculture">Bachelor of Agriculture</option>
+                            <option value="Bachelor of Social Work">Bachelor of Social Work</option>
+                            <option value="Master of Business Administration">Master of Business Administration</option>
+                            <option value="Master of Education">Master of Education</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="intake">Preferred Intake</label>
+                        <select id="intake" name="intake" required>
+                            <option value="">Select intake</option>
+                            <option value="August 2026">August 2026</option>
+                            <option value="January 2027">January 2027</option>
+                            <option value="September 2027">September 2027</option>
+                        </select>
+                    </div>
+                    <div class="form-group wide">
+                        <label for="school">Previous School / Institution</label>
+                        <input id="school" name="school" type="text" placeholder="Enter your last school attended" required>
+                    </div>
+                    <div class="form-group wide">
+                        <label for="academicBackground">Academic Background</label>
+                        <textarea id="academicBackground" name="academicBackground" rows="3" placeholder="List your recent qualifications and results" required></textarea>
+                    </div>
+                </div>
+
+                <div class="application-buttons">
+                    <button type="submit" class="portal-submit portal-student-submit">Submit Application</button>
+                    <a href="admission.html" class="secondary-button">Back to Admission</a>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
